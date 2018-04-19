@@ -1,3 +1,3 @@
 # sliderLulu
-ceci est un exercice javacript de l'AFPA qui a été amélioré
+ceci est un exercice javacript qui a été amélioré
 
