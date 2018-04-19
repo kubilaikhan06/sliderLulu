@@ -1,0 +1,42 @@
+h1
+{
+    color: blue;
+    text-align: center;
+}
+
+h2
+{
+   
+    color:red;
+    text-align: center;
+}
+
+#stop, #st2
+{
+    display: none;
+}
+
+td
+{
+    text-align: center;
+}
+
+.td1
+{
+    width: 650px;
+    height: 500px;
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+#prev:hover, #next:hover, #play:hover, #stop:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#photo:hover
+{
+    cursor: pointer;
+}
+
