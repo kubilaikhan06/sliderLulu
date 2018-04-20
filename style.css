@@ -26,6 +26,11 @@ td
 }
 
 #td1
+{
+    text-align: right;
+}
+
+#td2
 {    
     border: 5px solid red;
     border-radius: 10px;
