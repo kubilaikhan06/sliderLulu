@@ -64,7 +64,6 @@ function playStop()
         stop.style.display="none";
         document.getElementById('st1').style.display='block';
         document.getElementById('st2').style.display='none';
-
         return bool=true;
         };
                         
