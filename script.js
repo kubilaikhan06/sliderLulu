@@ -65,15 +65,19 @@ function playStop()
         document.getElementById('st1').style.display='block';
         document.getElementById('st2').style.display='none';
         return bool=true;
-        };
-                        
+        };          
 }
 
 //démarrage et arrêt diapo avec le bouton play et stop
 play_stop.onclick = function(){ playStop();};
 
+//document.querySelectorAll(".activer")[0].onclick = function(){ playStop();};
+
 //démarrage et arret diapo en cliquant sur l'image
 photo.onclick = function(){ playStop();};
+
+//document.querySelector('body').onkeypress = function(){playStop();}; 
+
 
 //passer à l'image précédente
 document.getElementById("prev").onclick = function(){ photo.src=affiche('images', 24, 'moins');};
@@ -81,8 +85,10 @@ document.getElementById("prev").onclick = function(){ photo.src=affiche('images'
 //passer à image suivante
 document.getElementById("next").onclick = function(){ photo.src=affiche('images', 24, 'plus');};
 
-//ferme la fenêtre
-fermer.onclick = function(){window.close();};    
+//ferme la fenêtre avec clic sur bouton
+fermer.onclick = function(){window.close();};
+//ouvre une fenêtre avec appui sur une touche du clavier
+document.querySelector('body').onkeypress = function(){window.open('https://www.youtube.com/watch?v=Q7U2DWiBRmM&list=PLwLsbqvBlImFB8AuT6ENIg-s87ys4yGWI&index=45');}; 
 
 //effets sur le bouton fermer fenêtre
 fermer.onmouseover = function(){ this.style.backgroundColor = 'red';
