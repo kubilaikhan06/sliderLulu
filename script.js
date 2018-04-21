@@ -88,7 +88,7 @@ document.getElementById("next").onclick = function(){ photo.src=affiche('images'
 //ferme la fenêtre avec clic sur bouton
 fermer.onclick = function(){window.close();};
 //ouvre une fenêtre avec appui sur une touche du clavier
-document.querySelector('body').onkeypress = function(){window.open('https://www.youtube.com/watch?v=Q7U2DWiBRmM&list=PLwLsbqvBlImFB8AuT6ENIg-s87ys4yGWI&index=45');}; 
+document.querySelector('body').onkeypress = function(){location.assign('https://www.youtube.com/watch?v=Q7U2DWiBRmM&list=PLwLsbqvBlImFB8AuT6ENIg-s87ys4yGWI&index=45');}; 
 
 //effets sur le bouton fermer fenêtre
 fermer.onmouseover = function(){ this.style.backgroundColor = 'red';
