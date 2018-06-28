@@ -75,7 +75,9 @@ play_stop.onclick = function(){ playStop();};
 
 //démarrage et arret diapo en cliquant sur l'image
 photo.onclick = function(){ playStop();};
-
+//démarrage et arret diapo en cliquant n'importe où sur la page
+document.querySelector('body').ondblclick = function(){ playStop();};
+//démarrage et arret diapo avec appui sur clavier
 //document.querySelector('body').onkeypress = function(){playStop();}; 
 
 
@@ -87,10 +89,13 @@ document.getElementById("next").onclick = function(){ photo.src=affiche('images'
 
 //ferme la fenêtre avec clic sur bouton
 fermer.onclick = function(){window.close();};
+//ou avec appui sur une touche clavier
+//document.querySelector('body').onkeypress = function(){window.close();};
+
 //ouvre une fenêtre avec appui sur une touche du clavier
-document.querySelector('body').onkeypress = function(){location.assign('https://www.youtube.com/watch?v=Q7U2DWiBRmM&list=PLwLsbqvBlImFB8AuT6ENIg-s87ys4yGWI&index=45');}; 
+document.querySelector('body').onkeypress = function(){location.assign('file:///C:/Users/R%C3%A9mi/Desktop/dossiers%20dans%20GIT/animationJquery/index.html');}; 
 
 //effets sur le bouton fermer fenêtre
 fermer.onmouseover = function(){ this.style.backgroundColor = 'red';
                                this.style.cursor = 'pointer';};
-fermer.onmouseout = function(){ this.style.backgroundColor = '';};
+fermer.onmouseout = function(){ this.style.backgroundColor = 'transparent';};
