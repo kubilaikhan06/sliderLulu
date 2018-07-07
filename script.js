@@ -69,12 +69,12 @@ function playStop()
 }
 
 //démarrage et arrêt diapo avec le bouton play et stop
-play_stop.onclick = function(){ playStop();};
-
+//play_stop.onclick = function(){ playStop();};
+(photo || play_stop).onclick = function(){ playStop();};
 //document.querySelectorAll(".activer")[0].onclick = function(){ playStop();};
 
 //démarrage et arret diapo en cliquant sur l'image
-photo.onclick = function(){ playStop();};
+//photo.onclick = function(){ playStop();};
 //démarrage et arret diapo en cliquant n'importe où sur la page
 document.querySelector('body').ondblclick = function(){ playStop();};
 //démarrage et arret diapo avec appui sur clavier
@@ -93,7 +93,8 @@ fermer.onclick = function(){window.close();};
 //document.querySelector('body').onkeypress = function(){window.close();};
 
 //ouvre une fenêtre avec appui sur une touche du clavier
-document.querySelector('body').onkeypress = function(){location.assign('file:///C:/Users/R%C3%A9mi/Desktop/dossiers%20dans%20GIT/animationJquery/index.html');}; 
+//document.querySelector('body').onkeypress = function(){location.assign('file:///C:/Users/R%C3%A9mi/Desktop/dossiers%20dans%20GIT/animationJquery/index.html');}; 
+
 
 //effets sur le bouton fermer fenêtre
 fermer.onmouseover = function(){ this.style.backgroundColor = 'red';
