@@ -86,7 +86,7 @@ document.getElementById("prev").onclick = function(){ photo.src=affiche('images'
 //passer à image suivante avec clic sur bouton next
 document.getElementById("next").onclick = function(){ photo.src=affiche('images', 24, 'plus');};
 
-//contrôle du diaporama avec clic sur les flèches du clavier et touche Enter
+//contrôle du diaporama avec clic sur les flèches du clavier et touches Enter/Echap
 document.onkeydown = function handleKeyDown(e){
     switch(e.keyCode)
         {
