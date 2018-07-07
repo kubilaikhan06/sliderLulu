@@ -69,32 +69,44 @@ function playStop()
 }
 
 //démarrage et arrêt diapo avec le bouton play et stop
-//play_stop.onclick = function(){ playStop();};
-(photo || play_stop).onclick = function(){ playStop();};
+play_stop.onclick = function(){ playStop();};
 //document.querySelectorAll(".activer")[0].onclick = function(){ playStop();};
 
 //démarrage et arret diapo en cliquant sur l'image
-//photo.onclick = function(){ playStop();};
+photo.onclick = function(){ playStop();};
 //démarrage et arret diapo en cliquant n'importe où sur la page
 document.querySelector('body').ondblclick = function(){ playStop();};
 //démarrage et arret diapo avec appui sur clavier
 //document.querySelector('body').onkeypress = function(){playStop();}; 
 
 
-//passer à l'image précédente
+//passer à l'image précédente avec clic sur bouton prev
 document.getElementById("prev").onclick = function(){ photo.src=affiche('images', 24, 'moins');};
 
-//passer à image suivante
+//passer à image suivante avec clic sur bouton next
 document.getElementById("next").onclick = function(){ photo.src=affiche('images', 24, 'plus');};
+
+//contrôle du diaporama avec clic sur les flèches du clavier et touche Enter
+document.onkeydown = function handleKeyDown(e){
+    switch(e.keyCode)
+        {
+            case 37://flèche gauche==> retour
+                photo.src=affiche('images', 24, 'moins');
+                break;
+            case 39://flèche droite==> avance
+                photo.src=affiche('images', 24, 'plus');
+                break;
+            case 13://touche enter==> play
+                playStop();
+                break;
+            case 27://touche echap==> affiche la page d'animation JQuery
+                location.assign('file:///C:/Users/R%C3%A9mi/Desktop/dossiers%20dans%20GIT/animationJquery/index.html');
+        };
+    //alert(e.keyCode);
+};
 
 //ferme la fenêtre avec clic sur bouton
 fermer.onclick = function(){window.close();};
-//ou avec appui sur une touche clavier
-//document.querySelector('body').onkeypress = function(){window.close();};
-
-//ouvre une fenêtre avec appui sur une touche du clavier
-//document.querySelector('body').onkeypress = function(){location.assign('file:///C:/Users/R%C3%A9mi/Desktop/dossiers%20dans%20GIT/animationJquery/index.html');}; 
-
 
 //effets sur le bouton fermer fenêtre
 fermer.onmouseover = function(){ this.style.backgroundColor = 'red';
