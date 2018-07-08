@@ -36,6 +36,13 @@ td
     border-radius: 10px;
 }
 
+#imgActive
+{    
+    width : 650px; 
+    height: 488px;
+    text-align: center;
+}
+
 #prev:hover, #next:hover, #play:hover, #stop:hover
 {
     transform: scale(1.1);
